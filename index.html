@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridgeway Dog Grooming — Plymouth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: #004D40;
+      background: #F5FFFE;
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1554692918-08fa0fdc9db3?w=1400');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      opacity: 0.9;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    .hero .email-link {
+      display: inline-block;
+      background: #4DB6AC;
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+    }
+    .hero .email-link:hover { background: #2E7D6F; }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    nav .logo { font-weight: 700; font-size: 1.1rem; color: #2E7D6F; text-decoration: none; }
+    nav ul { list-style: none; display: flex; gap: 1.8rem; }
+    nav ul li a { text-decoration: none; color: #004D40; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    nav ul li a:hover { color: #4DB6AC; }
+    section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+    section h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; margin-bottom: 2rem; color: #2E7D6F; text-align: center; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #E0F2F1;
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #2E7D6F; }
+    .service-card p { font-size: 0.95rem; color: #555; flex: 1; margin-bottom: 1rem; }
+    .service-card .price { font-weight: 700; color: #4DB6AC; font-size: 1.1rem; }
+    .about-content {
+      max-width: 700px; margin: 0 auto; text-align: center;
+      font-size: 1.05rem; line-height: 1.7; color: #444;
+    }
+    .about-content .phone { display: block; margin-top: 1.5rem; font-size: 1.2rem; font-weight: 600; color: #2E7D6F; }
+    .about-content .phone a { color: #2E7D6F; text-decoration: none; }
+    footer {
+      text-align: center; padding: 2rem; color: #888; font-size: 0.85rem;
+      border-top: 1px solid #E0F2F1;
+    }
+    @media (max-width: 600px) {
+      nav ul { gap: 1rem; }
+      nav ul li a { font-size: 0.85rem; }
+      .hero { min-height: 75vh; padding: 1.5rem; }
+      section { padding: 2.5rem 1.2rem; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="logo">Ridgeway Dog Grooming</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="top">
+    <h1>Ridgeway Dog Grooming</h1>
+    <p>Mobile dog grooming in Plympton</p>
+    <a href="mailto:ridgewaydoggrooming@outlook.com" class="email-link">Get in touch</a>
+  </section>
+
+  <section id="services">
+    <h2>Services &amp; Prices</h2>
+    <div class="services-grid">
+          <div class="service-card">
+            <h3>Full Groom</h3>
+            <p>Wash, dry, clip, scissor finish, ear check, nail trim and gland expression. For all coat types.</p>
+            <span class="price">£35–£50</span>
+          </div>          <div class="service-card">
+            <h3>Bath & Tidy</h3>
+            <p>Shampoo, condition, blow-dry, brush-out, light trim and nail clip. Ideal between full grooms.</p>
+            <span class="price">£22–£30</span>
+          </div>          <div class="service-card">
+            <h3>Puppy Pamper</h3>
+            <p>A gentle intro to grooming — bath, tidy, nail clip, ear check. Builds confidence for life.</p>
+            <span class="price">£18–£25</span>
+          </div>          <div class="service-card">
+            <h3>Hand Strip</h3>
+            <p>For wire-haired breeds that need it. Done properly by hand — no clippers on the body.</p>
+            <span class="price">£40–£55</span>
+          </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <p>We come to you in Plympton — our fully-equipped grooming van pulls up on your drive. No stressful car journeys or waiting rooms. Fifteen years of experience with every breed from Yorkies to Newfoundlands. Fully insured and City & Guilds qualified.</p>
+      <span class="phone"><a href="tel:07541 075 927">07541 075 927</a></span>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-bottom:3rem;text-align:center;">
+    <h2>Contact</h2>
+    <p style="margin-bottom:0.5rem;"><a href="mailto:ridgewaydoggrooming@outlook.com" style="color:#4DB6AC;font-weight:600;">ridgewaydoggrooming@outlook.com</a></p>
+    <p style="font-size:0.95rem;color:#888;">Or call <a href="tel:07541 075 927" style="color:#2E7D6F;text-decoration:none;">07541 075 927</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Ridgeway Dog Grooming. Plymouth, Devon.</p>
+  </footer>
+</body>
+</html>
